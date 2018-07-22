@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>调试优化</title>
+</head>
+
+<body>
+    <!--
+    考试要求：
+    1、优化函数addEvent1的执行性能
+    2、写出优化后的函数addEvent2
+    提示：能一次搞定的事，绝不做第二次
+    -->
+    <script>
+        
+        var addEvent1 = function (type, element, fun) {
+            if (document.addEventListener) {
+                element.addEventListener(type, fun, false);
+            } else if (document.attachEvent) {
+                element.attachEvent('on' + type, fun);
+            } else {
+                element['on' + type] = fun;
+            }
+        }
+
+        /* 请在这里写出优化后的函数addEvent2 */
+        
+    </script>
+</body>
+
+</html>
